@@ -1,9 +1,22 @@
-module "tpl_module" {
-  source = "tpl_source"
-  tpl_local_name = {
-    tpl_name = {
-      location            = "westeurope"
-      resource_group_name = "rg-mms-github"
+data "azurerm_subscription" "current" {}
+
+module "core" {
+  source = "registry.terraform.io/telekom-mms/core/azuredevops"
+  project = {
+    mms = {}
+  }
+}
+
+module "taskagent" {
+  source = "registry.terraform.io/telekom-mms/taskagent/azuredevops"
+  variable_group = {
+    azurerm = {
+      project_id = module.core.project["mms"].id
+      variable = {
+        subscription_name = {
+          value = data.azurerm_subscription.current.display_name
+        }
+      }
     }
   }
 }
