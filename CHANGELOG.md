@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/telekom-mms/terraform-azuredevops-taskagent/tree/1.0.1) (2024-08-28)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azuredevops-taskagent/compare/1.0.0...1.0.1)
+
+**Merged pull requests:**
+
+- run terrascan in test setting directory [\#2](https://github.com/telekom-mms/terraform-azuredevops-taskagent/pull/2) ([michaelamattes](https://github.com/michaelamattes))
+
 ## [1.0.0](https://github.com/telekom-mms/terraform-azuredevops-taskagent/tree/1.0.0) (2023-08-03)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azuredevops-taskagent/compare/48a97ec1fc044f9a4788b1c74a9d3f2a34bcfc98...1.0.0)
